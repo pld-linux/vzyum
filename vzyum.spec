@@ -6,6 +6,7 @@
 # * Installed to /usr/share/vzyum
 
 Summary:	RPM installer/updater used by OpenVZ template tools
+Summary(pl.UTF-8):	Narzędzie do instalacji i uaktualniania RPM-ów używane przez narzędzia OpenVZ
 Name:		vzyum
 Version:	2.4.0
 Release:	11
@@ -31,13 +32,18 @@ Obsoletes:	yum-phoebe
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define _prefix /usr/share/vzyum
-%define	_sysconfdir	%{_prefix}/etc
+%define		_prefix		/usr/share/vzyum
+%define		_sysconfdir	%{_prefix}/etc
 
 %description
 Yum is a utility that can check for and automatically download and
 install updated RPM packages. Dependencies are obtained and downloaded
 automatically prompting the user as necessary.
+
+%description -l pl.UTF-8
+Yum to narzędzie potrafiące sprawdzać istnienie i automatycznie ściągać
+oraz instalować uaktualnione pakiety RPM. Potrzebne zależności są
+ściągane automatycznie po potwierdzeniu użytkownika.
 
 %prep
 %setup -q -n yum-%{version}
@@ -59,7 +65,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%dir %{_prefix}
+%dir %{_sysconfdir}
 %{_sysconfdir}/pluginconf.d
+%dir %{_bindir}
 %attr(755,root,root) %{_bindir}/yum
 %dir %{_prefix}/yum-cli
 %{_prefix}/yum-cli/*
