@@ -8,12 +8,12 @@
 Summary:	RPM installer/updater used by OpenVZ template tools
 Summary(pl.UTF-8):	Narzędzie do instalacji i uaktualniania RPM-ów używane przez narzędzia OpenVZ
 Name:		vzyum
-Version:	2.4.0
-Release:	11
+Version:	2.4.3
+Release:	1
 License:	GPL
 Group:		Base
 Source0:	http://linux.duke.edu/projects/yum/download/2.4/yum-%{version}.tar.gz
-# Source0-md5:	c19a471ef5f72ddca3f100a60a07d1b3
+# Source0-md5:	2cb79c2cd430e7b199f73c5097a585f1
 Patch0:		http://download.openvz.org/template/utils/vzyum/2.4.0-11/src/yum-2.4.0-altpath.swsoft.patch
 Patch1:		http://download.openvz.org/template/utils/vzyum/2.4.0-11/src/yum-2.4.0-pluginpath.swsoft.patch
 Patch2:		http://download.openvz.org/template/utils/vzyum/2.4.0-11/src/yum-2.4.0-vps.swsoft.patch
