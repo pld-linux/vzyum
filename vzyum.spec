@@ -18,8 +18,9 @@ Patch0:		http://download.openvz.org/template/utils/vzyum/2.4.0-11/src/yum-2.4.0-
 Patch1:		http://download.openvz.org/template/utils/vzyum/2.4.0-11/src/yum-2.4.0-pluginpath.swsoft.patch
 Patch2:		http://download.openvz.org/template/utils/vzyum/2.4.0-11/src/yum-2.4.0-vps.swsoft.patch
 URL:		http://linux.duke.edu/yum/
-BuildRequires:	gettext
 BuildRequires:	python
+BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
 Requires:	/sbin/chkconfig
 Requires:	/sbin/service
 Requires:	coreutils
@@ -41,9 +42,9 @@ install updated RPM packages. Dependencies are obtained and downloaded
 automatically prompting the user as necessary.
 
 %description -l pl.UTF-8
-Yum to narzędzie potrafiące sprawdzać istnienie i automatycznie ściągać
-oraz instalować uaktualnione pakiety RPM. Potrzebne zależności są
-ściągane automatycznie po potwierdzeniu użytkownika.
+Yum to narzędzie potrafiące sprawdzać istnienie i automatycznie
+ściągać oraz instalować uaktualnione pakiety RPM. Potrzebne zależności
+są ściągane automatycznie po potwierdzeniu użytkownika.
 
 %prep
 %setup -q -n yum-%{version}
